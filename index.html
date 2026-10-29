@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guard One – Kapper in Tilburg-Reeshof</title>
+<meta name="description" content="Guard One: kapper in Tilburg-Reeshof. Knippen, fades en styling. Maak eenvoudig online een afspraak.">
+<link rel="icon" href="logo.png">
+<style>
+  :root{
+    --bg:#08080a; --bg2:#101013; --ink:#f2f3f5; --muted:#9a9da4; --silver:#c9ccd1; --line:#26272c;
+    --metal:linear-gradient(135deg,#f5f6f8 0%,#aeb2b9 45%,#e4e6ea 70%,#8c9097 100%);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+  h1,h2,h3{margin:0 0 .5em;line-height:1.1;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+  a{color:var(--silver)}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+  .metal{background:var(--metal);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+  header{position:sticky;top:0;z-index:10;background:rgba(8,8,10,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .brand img{height:46px;width:auto;display:block}
+  nav{display:flex;align-items:center;gap:26px}
+  nav a{color:var(--muted);text-decoration:none;font-size:.82rem;text-transform:uppercase;letter-spacing:.14em}
+  nav a:hover{color:var(--ink)}
+
+  .wordmark{font-size:1.25rem;font-weight:800;text-transform:uppercase;letter-spacing:.22em}
+  .hero-name{font-size:clamp(2.2rem,8vw,4.4rem);font-weight:800;text-transform:uppercase;letter-spacing:.2em;margin:0 0 .15em}
+  @media(max-width:420px){.wordmark{font-size:1rem;letter-spacing:.16em}}
+  .btn{display:inline-block;background:var(--metal);color:#0a0a0b!important;padding:14px 30px;text-decoration:none;font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:.82rem;
+       clip-path:polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px)}
+  .btn:hover{filter:brightness(1.12)}
+
+  .hero{padding:80px 0 70px;text-align:center;background:radial-gradient(ellipse at 50% 30%,#1a1b20 0%,var(--bg) 65%)}
+  .hero img{height:230px;width:auto;display:block;margin:0 auto 18px}
+  .hero h1{font-size:clamp(1.6rem,5vw,2.8rem)}
+  .hero p{max-width:520px;margin:0 auto 30px;color:var(--muted);font-size:1.05rem}
+
+  section{padding:70px 0}
+  section h2{font-size:1.7rem;text-align:center;margin-bottom:1.4em}
+  section h2::after{content:"";display:block;width:56px;height:3px;margin:14px auto 0;background:var(--metal)}
+
+  .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+  .card{background:var(--bg2);border:1px solid var(--line);padding:24px;clip-path:polygon(16px 0,100% 0,100% calc(100% - 16px),calc(100% - 16px) 100%,0 100%,0 16px)}
+  .card h3{font-size:1rem}
+  .card p{color:var(--muted);margin:0 0 12px;font-size:.95rem}
+  .price{font-weight:700;color:var(--silver);letter-spacing:.06em}
+
+  .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+  .gallery figure{margin:0;aspect-ratio:4/5;overflow:hidden;background:linear-gradient(135deg,#17181c,#0e0e11);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:#55575e;font-size:.85rem;text-transform:uppercase;letter-spacing:.12em}
+  .gallery img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.15)}
+
+  .booking{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .calendly-inline-widget{min-width:320px;height:700px}
+  .fallback{text-align:center;color:var(--muted);margin-top:12px;font-size:.9rem}
+
+  .contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
+  .contact h3{font-size:1rem}
+  .contact table{border-collapse:collapse;width:100%}
+  .contact td{padding:5px 0;border-bottom:1px solid var(--line)}
+  .contact td:last-child{text-align:right;color:var(--muted)}
+
+  footer{padding:34px 0;text-align:center;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
+  @media(max-width:640px){nav a:not(.btn){display:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Guard One – naar boven">
+      <img src="logo.png" alt="Guard One logo" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'metal',textContent:'G1',style:'font-size:1.6rem;font-weight:800;letter-spacing:.1em'}))">
+    <span class="wordmark metal">Guard One</span>
+    </a>
+    <nav>
+      <a href="#diensten">Diensten</a>
+      <a href="#galerij">Ons werk</a>
+      <a href="#contact">Contact</a>
+      <a class="btn" href="#afspraak">Afspraak</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <img src="logo.png" alt="" onerror="this.style.display='none'">
+      <div class="hero-name metal">Guard One</div>
+      <h1 class="metal">Scherp. Strak. Jouw stijl.</h1>
+      <p>Kapper in Tilburg-Reeshof. Knippen, fades en styling met oog voor detail. Boek eenvoudig online je afspraak.</p>
+      <a class="btn" href="#afspraak">Maak een afspraak</a>
+    </div>
+  </div>
+
+  <section id="diensten">
+    <div class="wrap">
+      <h2>Diensten</h2>
+      <div class="services">
+        <div class="card"><h3>Knippen</h3><p>Knippen en stylen, helemaal naar jouw wens.</p><span class="price">€ 15,-</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="galerij" style="background:var(--bg2)">
+    <div class="wrap">
+      <h2>Ons werk</h2>
+      <div class="gallery">
+        <!-- Vervang elk <figure> door: <figure><img src="fotos/kapsel1.jpg" alt="Beschrijving van het kapsel"></figure> -->
+        <figure>Foto 1</figure>
+        <figure>Foto 2</figure>
+        <figure>Foto 3</figure>
+        <figure>Foto 4</figure>
+        <figure>Foto 5</figure>
+        <figure>Foto 6</figure>
+        <figure>Foto 7</figure>
+        <figure>Foto 8</figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="afspraak" class="booking">
+    <div class="wrap">
+      <h2>Maak een afspraak</h2>
+      <!-- Vervang JOUW-NAAM door jullie eigen Calendly-adres -->
+      <div class="calendly-inline-widget" data-url="https://calendly.com/guardone-kapper/knippenenstylen?hide_gdpr_banner=1&background_color=101013&text_color=f2f3f5&primary_color=c9ccd1"></div>
+      <p class="fallback">Lukt het niet? <a href="https://calendly.com/guardone-kapper/knippenenstylen" target="_blank" rel="noopener">Open de agenda in een nieuw venster</a>.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <div class="contact">
+        <div>
+          <h3>Adres</h3>
+          <p>R-buurt, Reeshof<br>Tilburg<br>
+          Tel: <a href="tel:+31613847411">06 13 84 74 11</a><br>
+          E-mail: <a href="mailto:guardone.kapper@gmail.com">guardone.kapper@gmail.com</a></p>
+        </div>
+        <div>
+          <h3>Openingstijden</h3>
+          <p><strong>Alleen op afspraak.</strong><br>Kies zelf een dag en tijd in de <a href="#afspraak">online agenda</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="jaar"></span> Guard One · <a href="privacy.html">Privacyverklaring</a></div>
+</footer>
+
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<script>document.getElementById('jaar').textContent = new Date().getFullYear();</script>
+</body>
+</html>
