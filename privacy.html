@@ -49,20 +49,7 @@
   .card p{color:var(--muted);margin:0 0 12px;font-size:.95rem}
   .price{font-weight:700;color:var(--silver);letter-spacing:.06em}
 
-  .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
-  .gallery{grid-auto-flow:dense}
-  .gallery figure{margin:0;aspect-ratio:3/4;overflow:hidden;background:linear-gradient(135deg,#17181c,#0e0e11);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:#55575e;font-size:.85rem;text-transform:uppercase;letter-spacing:.12em}
-  .gallery img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.15)}
 
-  .ba{position:relative;grid-column:1/-1;width:100%;max-width:460px;justify-self:center;user-select:none;touch-action:pan-y;--pos:50}
-  .ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-  .ba .voor{clip-path:inset(0 calc(100% - var(--pos)*1%) 0 0)}
-  .ba .lijn{position:absolute;top:0;bottom:0;left:calc(var(--pos)*1%);width:3px;margin-left:-1.5px;background:var(--metal);pointer-events:none}
-  .ba .lijn::after{content:"\2194";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:38px;height:38px;border-radius:50%;background:#0a0a0b;border:2px solid var(--silver);color:var(--silver);display:flex;align-items:center;justify-content:center;font-size:1.1rem}
-  .ba .label{position:absolute;top:12px;padding:4px 10px;background:rgba(8,8,10,.75);color:var(--ink);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;pointer-events:none}
-  .ba .l-voor{left:12px}.ba .l-na{right:12px}
-  .ba input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize}
-  @media(min-width:900px){.ba{grid-column:span 2;grid-row:span 2;max-width:none;aspect-ratio:auto}}
 
   .booking{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .calendly-inline-widget{min-width:320px;height:700px}
@@ -97,7 +84,6 @@
     </a>
     <nav>
       <a href="index.html#diensten">Diensten</a>
-      <a href="index.html#galerij">Ons werk</a>
       <a href="index.html#contact">Contact</a>
       <a class="btn" href="index.html#afspraak">Afspraak</a>
     </nav>
